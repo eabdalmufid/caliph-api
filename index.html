@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>JSDoc: Home</title>
+
+    <script src="scripts/prettify/prettify.js"> </script>
+    <script src="scripts/prettify/lang-css.js"> </script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <link type="text/css" rel="stylesheet" href="styles/prettify-tomorrow.css">
+    <link type="text/css" rel="stylesheet" href="styles/jsdoc-default.css">
+</head>
+
+<body>
+
+<div id="main">
+
+    <h1 class="page-title">Home</h1>
+
+    
+
+
+
+    
+
+
+    <h3> </h3>
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+    <section>
+        <article><h1>caliph-api</h1>
+<p align="center">
+<a target="_blank" href="https://github.com/caliphdev"><img src="https://avatars.githubusercontent.com/caliphdev?s=400&u=ce99f02d685d58b2bc8b381afa7868481515dbe7&v=4" alt="" width="169" /></a]
+</p>
+<p align="center">
+<a target="_blank" href="https://github.com/caliphdev"><img title="Author" src="https://img.shields.io/badge/Author-Caliphdev-red.svg?style=for-the-badge&logo=github" /></a>
+<br>
+<a target="_blank" href="//npmjs.com/caliph-api"><img src="https://img.shields.io/npm/dw/caliph-api?color=yellow&label=Downloads&logo=npm&style=flat"></a>
+<br>
+<a target="_blank" href="https://www.npmjs.com/package/caliph-api?activeTab=versions"><img src="https://img.shields.io/npm/v/caliph-api?color=green&label=version&logo=npm&style=social"></a>
+</p>
+<h1>Note</h1>
+<p>ID<br>
+Jika Ada Bug,<br>
+Silahkan Buat <a href="https://github.com/caliphdev/caliph-api/issues/new">Issues</a></p>
+<p>EN</br>
+If there are bugs,</br>
+please create <a href="https://github.com/caliphdev/caliph-api/issues/new">Issues</a></p>
+<h1>Installation</h1>
+<h2>Latest</h2>
+<p><code>npm i github:caliphdev/caliph-api</code></p>
+<h2>Npm</h2>
+<p><code>npm i caliph-api</code></p>
+<h1>Require</h1>
+<pre class="prettyprint source lang-js"><code>const api = require(&quot;caliph-api&quot;);
+</code></pre>
+<h1>Docs</h1>
+<h2>Encrypt</h2>
+<pre class="prettyprint source lang-js"><code>// Binary (Encrypt)
+const result = api.encrypt.binary.enc(&quot;hello world&quot;);
+console.log(result); // 1101000 1100101 1101100 1101100 1101111 100000 1110111 1101111 1110010 1101100 1100100
+
+// Binary (Decrypt)
+const result = api.encrypt.binary.dec(&quot;1101000 1100101 1101100 1101100 1101111 100000 1110111 1101111 1110010 1101100 1100100&quot;);
+console.log(result); // Hello World
+</code></pre>
+<h2>Information</h2>
+<pre class="prettyprint source lang-js"><code>// Info Gempa Terbaru
+api.info.gempa()
+.then(console.log);
+</code></pre>
+<h2>Wibu Stress</h2>
+<pre class="prettyprint source lang-js"><code>// Wangy
+const result = api.stress.wangy(String);
+console.log(result);
+
+// Nenen
+const result = api.stress.nenen(String);
+console.log(result);
+
+// Simp
+const result = api.stress.simp(String);
+console.log(result);
+
+// Sherk
+const result = api.stress.sherk(String);
+console.log(result);
+</code></pre>
+<h2>Downloader</h2>
+<pre class="prettyprint source lang-js"><code>// YouTube Music
+api.downloader.youtube.ytmp3(url)
+.then(console.log);
+
+// Youtube Video
+api.downloader.youtube.ytmp4(url)
+.then(console.log);
+
+// Youtube Play Music
+api.downloader.youtube.ytplay(query)
+.then(console.log);
+
+// YouTube Play Video
+api.downloader.youtube.ytplayvid(query)
+.then(console.log);
+
+// Tiktok
+api.downloader.tiktok(url)
+.then(console.log);
+
+// Tiktok 2
+api.downloader.tiktok2(url)
+.then(console.log);
+
+// SoundCloud
+api.downloader.soundcloud(url)
+.then(console.log);
+
+// Instagram Downloader 
+api.downloader.instagram(URL)
+.then(console.log);
+
+// MediaFire
+api.downloader.mediafire(URL)
+.then(console.log);
+
+// ZippyShare
+api.downloader.zippyshare(URL)
+.then(console.log);
+
+// Pinterest Downloader
+api.downloader.pindl(URL)
+.then(console.log)
+</code></pre>
+<h2>Search</h2>
+<pre class="prettyprint source lang-js"><code>// Happymod
+api.search.happymod(query)
+.then(console.log);
+
+// Cari Grup Wa
+api.search.carigrup(query)
+.then(console.log);
+
+// Kusonime
+api.search.kusonime(query)
+.then(console.log);
+
+// IP Lookup
+api.search.iplookup(domain / ip)
+.then(console.log);
+
+// Cuaca
+api.search.cuaca(kota / city)
+.then(console.log);
+
+// Artinama
+api.search.artinama(String)
+.then(console.log);
+
+// IG Stalk
+api.search.igstalk(user)
+.then(console.log);
+
+// Film
+api.search.film(query)
+.then(console.log);
+
+// Wallpaper Cave
+api.search.wallpapercave(query)
+.then(console.log);
+
+// Singkatan Kata
+api.search.singkatankata(Kata)
+.then(console.log);
+
+// Persamaan Kata (Sinomin)
+api.search.persamaankata(Kata)
+.then(console.log);
+
+// Al Quran
+api.search.quran(Surah)
+.then(console.log);
+
+// Free Fire ID
+api.search.freefireid(ID)
+.then(console.log);
+
+// Wall Alphacoders
+api.search.wall_alphacoders(Query)
+.then(console.log);
+
+// Tiktok Stalk
+api.search.ttstalk(username_tiktok)
+.then(console.log);
+
+// Pinterest Search 
+api.search.pin(Query)
+.then(console.log);
+
+// Soundcloud Search
+api.search.soundcloud(Query)
+.then(console.log)
+
+// Sfile.mobi search
+api.search.sfile(Query)
+.then(console.log)
+
+// Chord Lagu
+api.search.chordlagu(Query)
+.then(console.log)
+</code></pre>
+<h2>Random</h2>
+<pre class="prettyprint source lang-js"><code>// Fake UserAgent
+const result = api.random.fakeua();
+console.log(result);
+
+// Quotes Anime
+api.random.quotesanime()
+.then(console.log);
+</code></pre>
+<h2>Other</h2>
+<pre class="prettyprint source lang-js"><code>// Emojimix
+api.other.emojimix(Emoji1, Emoji2)
+.then(console.log);
+
+// Translate
+api.other.translate(String, lang)
+.then(console.log); // Lang (Optional, Default: id)
+
+// Rangkum (summarize)
+api.other.rangkum(String)
+.then(console.log);
+</code></pre>
+<h2>Tools</h2>
+<pre class="prettyprint source lang-js"><code>// Subdomain Finder
+// lookup all subdomain
+api.tools.subfinder(domain)
+.then(console.log) // ex: kominfo.co.id
+
+// Whois
+api.tools.whois(domain)
+.then(console.log);
+
+// getHeaders
+api.tools.getHeaders(url)
+.then(console.log);
+
+// Shortlink
+api.tools.shortlink(url, custom)
+.then(console.log); // custom (optional, default: random)
+
+// Upload File
+api.tools.uploadFile(Buffer)
+.then(console.log); // upload file to https://uploader.caliph.my.id
+
+// Upload File 2
+api.tools.uploadFile2(Buffer)
+.then(console.log); // upload file to https://www.filezone.cf
+
+// Minifyjs
+api.tools.minifyjs(Code_javascript);
+
+// Encrypt HTML
+api.tools.EncryptHTML(Code_html);
+
+// Unshort URL
+api.tools.expandurl(URL)
+.then(console.log);
+
+// Is Porn
+api.tools.isporn(domain)
+.then(console.log);
+
+// TextPro Maker
+api.tools.textpro(URL, [text1, text2])
+.then(console.log)
+</code></pre>
+<h2>Game</h2>
+<pre class="prettyprint source lang-js"><code>// Family100
+api.game.family100()
+.then(console.log);
+
+// Siapakah Aku
+api.game.siapakahaku()
+.then(console.log);
+</code></pre></article>
+    </section>
+
+
+
+
+
+
+</div>
+
+<nav>
+    <h2><a href="index.html">Home</a></h2><h3>Global</h3><ul><li><a href="global.html#axios">axios</a></li><li><a href="global.html#binaryAgent">binaryAgent</a></li><li><a href="global.html#cheerio">cheerio</a></li><li><a href="global.html#fetch">fetch</a></li><li><a href="global.html#request">request</a></li><li><a href="global.html#summarize">summarize</a></li></ul>
+</nav>
+
+<br class="clear">
+
+<footer>
+    Documentation generated by <a href="https://github.com/jsdoc/jsdoc">JSDoc 3.6.11</a> on Tue Oct 04 2022 13:05:07 GMT+0000 (Coordinated Universal Time)
+</footer>
+
+<script> prettyPrint(); </script>
+<script src="scripts/linenumber.js"> </script>
+</body>
+</html>
